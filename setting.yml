@@ -58,7 +58,7 @@ Resources:
       EnableDnsHostnames: True
       InstanceTenancy: default
       Tags:
-      - Key: Namw
+      - Key: Name
         Value: vpc-amblab
  
   BlockchainWorkshopPublicSubnet:
@@ -114,10 +114,10 @@ Resources:
   BlockchainWorkshopRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
-        VpcId: Ref BlockchainWorkshopVPC
+        VpcId: !Ref BlockchainWorkshopVPC
         Tags:
-          - Key: ReInventBlockchainWorkshop
-            Value: RouteTable
+          - Key: Name
+            Value: rt-amblab
  
   BlockchainWorkshopRoute:
     Type: AWS::EC2::Route

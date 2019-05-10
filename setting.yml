@@ -58,8 +58,8 @@ Resources:
       EnableDnsHostnames: True
       InstanceTenancy: default
       Tags:
-      - Key: ReInventBlockchainWorkshop
-        Value: VPC
+      - Key: Namw
+        Value: vpc-amblab
  
   BlockchainWorkshopPublicSubnet:
     Type: AWS::EC2::Subnet
@@ -68,11 +68,11 @@ Resources:
         MapPublicIpOnLaunch: false
         CidrBlock: 10.0.0.0/16
         Tags:
-        - Key: ReInventBlockchainWorkshop
-          Value: PublicSubnet
+        - Key: Name
+          Value: sb-amblab
  
   BlockchainWorkshopSecurityGroupBase:
-        Type:    AWS::EC2::SecurityGroup
+        Type: AWS::EC2::SecurityGroup
         Properties:
           GroupDescription: Base Security Group
           VpcId: !Ref BlockchainWorkshopVPC
@@ -86,8 +86,8 @@ Resources:
             FromPort: 0
             ToPort: 65535
           Tags:
-          - Key: ReInventBlockchainWorkshop
-            Value: BaseSecurityGroup
+          - Key: Name
+            Value: secg-amblab
  
   BlockchainWorkshopSecurityGroupBaseIngress:
     Type: AWS::EC2::SecurityGroupIngress
@@ -97,16 +97,13 @@ Resources:
       GroupId: !GetAtt BlockchainWorkshopSecurityGroupBase.GroupId
       ToPort: -1
       SourceSecurityGroupId: !GetAtt BlockchainWorkshopSecurityGroupBase.GroupId
-      Tags:
-      - Key: ReInventBlockchainWorkshop
-        Value: BaseSecurityGroupIngress
  
   BlockchainWorkshopInternetGateway:
     Type: "AWS::EC2::InternetGateway"
     Properties:
       Tags:
-      - Key: ReInventBlockchainWorkshop
-        Value: InternetGateway
+      - Key: Name
+        Value: igw-amblab
  
   BlockchainWorkshopAttachGateway:
     Type: AWS::EC2::VPCGatewayAttachment
@@ -156,13 +153,13 @@ Resources:
         IamInstanceProfile: !Ref BlockchainWorkshopRootInstanceProfile
         NetworkInterfaces:
         - AssociatePublicIpAddress: true
-          DeviceIndex:   0
+          DeviceIndex: 0
           GroupSet: 
           - !Ref BlockchainWorkshopSecurityGroupBase
           SubnetId: !Ref BlockchainWorkshopPublicSubnet
         Tags:
           - Key: Name
-            Value:  ManagedBlockchainWorkshopEC2ClientInstance
+            Value: ec2-amblab
  
   BlockchainWorkshopELB:
     Type: AWS::ElasticLoadBalancing::LoadBalancer

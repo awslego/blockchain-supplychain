@@ -25,7 +25,7 @@ chmod 400 ~/$NETWORKNAME-keypair.pem
 sleep 10
 
 echo Create the VPC, the Fabric client node and the VPC endpoints using CloudFormation ...
-aws cloudformation deploy --stack-name $NETWORKNAME-env-setting --template-file setting.yaml \
+aws cloudformation deploy --stack-name $NETWORKNAME-env-setting --template-file setting.yml \
 --capabilities CAPABILITY_NAMED_IAM \
 --parameter-overrides KeyName=$NETWORKNAME-keypair BlockchainVpcEndpointServiceName=$VPCENDPOINTSERVICENAME \
 --region $REGION

@@ -8,7 +8,7 @@ Description:     >
 Parameters:
   KeyName:
     Type: AWS::EC2::KeyPair::KeyName
-    Description": Name of an existing EC2 KeyPair to enable SSH access to the instances
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instances
 
   BlockchainVpcEndpointServiceName:
     Type: String
@@ -35,7 +35,7 @@ Resources:
         -
           PolicyName: "root"
           PolicyDocument:
-            Version:"2012-10-17"
+            Version: "2012-10-17"
             Statement:
               -
                 Effect: "Allow"
@@ -92,7 +92,7 @@ Resources:
   BlockchainWorkshopSecurityGroupBaseIngress:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
-      IpProtocol:-1
+      IpProtocol: -1
       FromPort: -1
       GroupId: !GetAtt BlockchainWorkshopSecurityGroupBase.GroupId
       ToPort: -1
@@ -120,7 +120,7 @@ Resources:
             Value: RouteTable
  
   BlockchainWorkshopRoute:
-    Type: WS::EC2::Route
+    Type: AWS::EC2::Route
     Properties:
         RouteTableId: !Ref BlockchainWorkshopRouteTable
         DestinationCidrBlock: 0.0.0.0/0

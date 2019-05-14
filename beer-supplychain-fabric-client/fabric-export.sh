@@ -59,5 +59,5 @@ export CHANNEL=mychannel
 export CAFILE=/opt/home/managedblockchain-tls-chain.pem
 export CHAINCODENAME=mycc
 export CHAINCODEVERSION=v0
-export CHAINCODEDIR=github.com/chaincode_example02/go
+export CHAINCODEDIR=github.com/beersupplychain
 EOF

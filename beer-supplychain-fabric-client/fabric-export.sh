@@ -13,7 +13,7 @@ export MEMBERID=<your member ID, from the AWS Console>
 
 # No need to change anything below here
 echo Updating AWS CLI to the latest version
-sudo pip install a  wscli --upgrade
+sudo pip install awscli --upgrade
 cd ~
 
 VpcEndpointServiceName=$(aws managedblockchain get-network --region $REGION --network-id $NETWORKID --query 'Network.VpcEndpointServiceName' --output text)

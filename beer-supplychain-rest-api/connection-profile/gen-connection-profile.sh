@@ -21,7 +21,7 @@ LOCALCA=/home/ec2-user/managedblockchain-tls-chain.pem
 #copy the connection profiles
 mkdir -p $REPODIR/tmp/connection-profile/org1
 cp $REPODIR/beer-supplychain-rest-api/connection-profile/beer-supplychain-connection-profile-template.yaml $REPODIR/tmp/connection-profile/beer-supplychain-connection-profile.yaml
-cp $REPODIR/beer-supplychain-rest-api/connection-profile/client-org1.yaml $REPODIR/tmp/connection-profile/org1
+cp $REPODIR/beer-supplychain-rest-api/connection-profile/client-org1-template.yaml $REPODIR/tmp/connection-profile/org1
 
 #update the connection profiles with endpoints and other information
 sed -i "s|%PEERNODEID%|$PEERNODEID|g" $REPODIR/tmp/connection-profile/beer-supplychain-connection-profile.yaml

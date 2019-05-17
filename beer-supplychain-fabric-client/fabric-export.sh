@@ -3,8 +3,8 @@
 
 # Update these values, then `source` this script
 export REGION=us-east-1
-export NETWORKNAME=amblab
-export MEMBERNAME=member1
+export NETWORKNAME=beer
+export MEMBERNAME=org1
 export NETWORKVERSION=1.2
 export ADMINUSER=admin1
 export ADMINPWD=Passwd123

@@ -35,6 +35,7 @@ organizations:
     certificateAuthorities:
       - ca-org1
 
+
 orderers:
   orderer.com:
     url: grpcs://%ORDERINGSERVICEENDPOINT%

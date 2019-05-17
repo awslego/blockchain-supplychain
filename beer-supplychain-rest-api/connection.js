@@ -23,9 +23,9 @@ hfc.setLogger(logger);
 
 async function getClientForOrg (userorg, username) {
 	logger.info('============ START getClientForOrg for org %s and user %s', userorg, username);
-	let config = './connection-profile/tmp/beer-supplychain-connection-profile.yaml';
+	let config = '../tmp/connection-profile/beer-supplychain-connection-profile.yaml';
 	let orgLower = userorg.toLowerCase();
-	let clientConfig = './connection-profile/tmp/' + orgLower + '/client-' + orgLower + '.yaml';
+	let clientConfig = '../tmp/connection-profile/' + orgLower + '/client-' + orgLower + '.yaml';
 
 	logger.info('##### getClient - Loading connection profiles from file: %s and %s', config, clientConfig);
 

@@ -2,11 +2,11 @@ var maskHeight = $(document).height();
 var maskWidth = $(window).width();  
 var sum = 0;
 
-
+//customizing variables. 
 var manufacturer = "Manufacturer"
 var truckdriver = "ShippingCompany"
 var retailer = "Retailer"
-var OrderEndpoint = "http://beer-supplychain-alb-2109300575.ap-northeast-2.elb.amazonaws.com/"
+var OrderEndpoint = " " // insert your ELB endpoint
 
 
 

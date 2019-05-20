@@ -201,23 +201,13 @@ Resources:
           - Key: Name
             Value: ec2-amblab-client
  
+
  
-
-
-
 Outputs:
   VPCID:
     Description: VPC ID
     Value:
       !Ref BlockchainWorkshopVPC
-  PublicSubnetID:
-    Description: Public Subnet ID
-    Value:
-      !Ref BlockchainWorkshopPublicSubnet
-  SecurityGroupID:
-    Description: Security Group ID
-    Value:
-      !GetAtt BlockchainWorkshopSGBase.GroupId
   EC2URL:
     Description: Public DNS of the EC2 instance
     Value:
@@ -230,3 +220,5 @@ Outputs:
     Description: VPC Endpoint ID
     Value:
       !Ref BlockchainWorkshopVPCEndpoint
+
+

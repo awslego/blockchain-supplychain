@@ -1,11 +1,12 @@
 var maskHeight = $(document).height();  
 var maskWidth = $(window).width();  
 var sum = 0;
-
-//customizing variables. 
 var manufacturer = "Manufacturer"
 var truckdriver = "ShippingCompany"
 var retailer = "Retailer"
+
+//customizing variables. 
+var username = " " //insert your user name 
 var OrderEndpoint = " " // insert your ELB endpoint
 
 
@@ -21,11 +22,12 @@ var main = function () {
             dataType: 'json',
             headers: {
                 'accept': '*/*',
-                'X-username': 'client1',
+                'X-username': username,
                 'X-orgName': 'org1'
             },
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
+                data = data[0]
                 if (data["State"] === "0" || data["State"] === "1") {
                     //패널(div)의 내용 초기화 및 추가 
                     $('#devicetext').empty();
@@ -1061,7 +1063,7 @@ if (document.getElementById("btnRC") !== null) {
                     dataType: 'json',
                     headers: {
                         'accept': '*/*',
-                        'X-username': 'client1',
+                        'X-username': username,
                         'X-orgName': 'org1'
                     },
                     contentType: 'application/json; charset=utf-8',

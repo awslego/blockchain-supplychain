@@ -6,8 +6,8 @@ var truckdriver = "ShippingCompany"
 var retailer = "Retailer"
 
 //customizing variables. 
-var username = " " //insert your user name 
-var OrderEndpoint = " " // insert your ELB endpoint
+var username = " " // insert your user name 
+var OrderEndpoint = "http://[your ELB endpoint]" // insert your ELB endpoint
 
 
 
@@ -17,7 +17,7 @@ var main = function () {
         sum += 1;
         //order 테이블에서 정보 가져오기 
         $.ajax({
-            url: OrderEndpoint + "orders/ORDER0",
+            url: OrderEndpoint + "/orders/ORDER0",
             type: 'GET',
             dataType: 'json',
             headers: {
@@ -1058,7 +1058,7 @@ if (document.getElementById("btnRC") !== null) {
             type: 'POST',
             success: function (response) {
                 $.ajax({
-                    url: OrderEndpoint + "orders/ORDER0",
+                    url: OrderEndpoint + "/orders/ORDER0",
                     type: 'GET',
                     dataType: 'json',
                     headers: {

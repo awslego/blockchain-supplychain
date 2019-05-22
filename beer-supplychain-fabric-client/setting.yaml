@@ -144,6 +144,11 @@ Resources:
         Properties:
           GroupDescription: AMB Lab Security Group for EC2 
           VpcId: !Ref BlockchainWorkshopVPC
+          SecurityGroupIngress:
+          - IpProtocol: tcp
+            CidrIp: 0.0.0.0/0
+            FromPort: 22
+            ToPort: 22
           Tags:
           - Key: Name
             Value: secg-amblab-ec2

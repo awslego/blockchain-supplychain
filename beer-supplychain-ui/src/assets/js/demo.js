@@ -879,7 +879,7 @@ if (document.getElementById("btnMAT") !== null) {
 
         $.ajax({
             url: OrderEndpoint + "transfer/accept",
-            headers: { "accept": "*/*", "X-username": "client1", "X-orgName": "org1" },
+            headers: { "accept": "*/*", "X-username": username, "X-orgName": "org1" },
             type: 'POST',
             success: function (response) {
                 alert("전송 완료")
@@ -917,7 +917,7 @@ if (document.getElementById("btnMRT") !== null) {
 
                 $.ajax({
                     url: OrderEndpoint + "transfer/request",
-                    headers: { "accept": "*/*", "X-username": "client1", "X-orgName": "org1" },
+                    headers: { "accept": "*/*", "X-username": username, "X-orgName": "org1" },
                     type: 'POST',
                     data: sendDATA,
                     contentType: 'application/json',
@@ -954,7 +954,7 @@ if (document.getElementById("btnTAT") !== null) {
 
         $.ajax({
             url: OrderEndpoint + "transfer/accept",
-            headers: { "accept": "*/*", "X-username": "client1", "X-orgName": "org1" },
+            headers: { "accept": "*/*", "X-username": username, "X-orgName": "org1" },
             type: 'POST',
             success: function (response) {
                 alert("전송 완료")
@@ -991,7 +991,7 @@ if (document.getElementById("btnTRT") !== null) {
 
                 $.ajax({
                     url: OrderEndpoint + "transfer/request",
-                    headers: { "accept": "*/*", "X-username": "client1", "X-orgName": "org1" },
+                    headers: { "accept": "*/*", "X-username": username, "X-orgName": "org1" },
                     type: 'POST',
                     data: sendDATA,
                     contentType: 'application/json',
@@ -1028,7 +1028,7 @@ if (document.getElementById("btnRAT") !== null) {
 
         $.ajax({
             url: OrderEndpoint + "transfer/accept",
-            headers: { "accept": "*/*", "X-username": "client1", "X-orgName": "org1" },
+            headers: { "accept": "*/*", "X-username": username, "X-orgName": "org1" },
             type: 'POST',
             success: function (response) {
                 alert("전송 완료")
@@ -1054,7 +1054,7 @@ if (document.getElementById("btnRC") !== null) {
 
         $.ajax({
             url: OrderEndpoint + "transfer/complete",
-            headers: { "accept": "*/*", "X-username": "client1", "X-orgName": "org1" },
+            headers: { "accept": "*/*", "X-username": username, "X-orgName": "org1" },
             type: 'POST',
             success: function (response) {
                 $.ajax({

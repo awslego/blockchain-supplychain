@@ -4,6 +4,7 @@
 # 
 */
 
+//customizing variables. 
 var APIGWURL = ""; // insert your API GW endpoint (ex.https://ghddibof0a.execute-api.us-east-1.amazonaws.com/v1/transaction/message)
 
 

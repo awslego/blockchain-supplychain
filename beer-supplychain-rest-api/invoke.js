@@ -94,7 +94,7 @@ var invokeChaincode = async function(peerNames, channelName, chaincodeName, args
 							logger.info(message);
 							logger.info('## %s, %s, %s, %s, %s, %s', fcn, JSON.stringify(args), channelName, chaincodeName, username, orgName);
 							let tx_data = {"txId": txIdAsString, "fcn": fcn, "args": args, "channelName": channelName, "chaincodeName": chaincodeName, "username": username, "orgName": orgName};
-							//exporter.exportTransactionData(tx_data);  //call exporter.js 
+							exporter.exportTransactionData(tx_data);  //call exporter.js 
 							resolve(message);
 						}
 					}, (err) => {

@@ -31,3 +31,6 @@ var exportTransactionData = async function(message) {
                 return error.toString();
 	}
 }
+
+exports.exportTransactionData = exportTransactionData;
+
